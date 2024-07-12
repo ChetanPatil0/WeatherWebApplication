@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Weather Application</title>
+</head>
+
+<body class="bg-gray-900 mt-40" onload="getLocation(); weatherdata();">
+    <main class="container w-[70vh] bg-gray-400 mx-auto p-5 rounded-lg">
+        <div class=" rounded-md px-1 py-1 shadow-md shadow-slate-600 bg-gray-950 text-gray-200 inline text-center ">
+            <i class="fa-solid fa-magnifying-glass ml-1"></i>
+            <input class="w-[15vh] bg-gray-950 pl-2 capitalize placeholder-gray-300 text-sm focus:outline-none " type="text" placeholder="Search Your City" id="search-city" oninput="weatherdata()" onchange="weatherdata()" >
+        </div>
+        <div class="Weather-body text-center mt-2">
+            <h1 class="font-bold text-2xl" id="Weather-city">Please Search Your City</h1>
+            <h3 class="font-bold text-sm text-gray-600 " id="date-time"></h3>
+            <div class=" flex justify-around flex-wrap ">
+                <div class="flex items-center">
+                    <img class=" w-[15vh]" src="#" alt="icon" id="weather_icon" width="">
+                    <h1 class="bg-gray-950 rounded-full text-gray-200 px-1 py-2 text-lg leading-5 capitalize w-[15vh] text-center" id="weatehr-type">Clouds</h1>
+                </div>
+                <div class="my-10 pr-5">
+                    <h1 class="border  rounded-full text-gray-950 px-1 py-1 text-md font-medium" id="current_temp"></h1>
+                    <div class="mt-2 flex">
+                        <p class=" text-sm text-gray-900 mx-2" id="min-temp"></p>
+                        <p class=" text-sm text-gray-900 mx-2" id="max-temp"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex w-[100%] justify-around border rounded-md  border-gray-700 border-2 p-5">
+                <div class="flex justify-around items-center">
+                    <i class="fa-solid fa-temperature-quarter text-4xl"></i>
+                    <div class="text-left text-sm font-semibold text-gray-800 mx-1">
+                        <h1>Feels Like</h1>
+                        <h1 id="weather-feels"></h1>
+                    </div>
+                </div>
+                <div class="flex justify-around items-center ">
+                    <i class="fa-solid fa-droplet text-4xl"></i>
+                    <div class="text-left text-sm font-semibold text-gray-800 mx-1">
+                        <h1>Humidity</h1>
+                        <h1 id="weather-humidity"></h1>
+                    </div>
+                </div>
+                <div class="flex justify-around items-center">
+                    <i class="fa-solid fa-wind text-4xl"></i>
+                    <div class="text-left text-sm font-semibold text-gray-800 mx-1">
+                        <h1>Wind</h1>
+                        <h1 id="weather-wind"></h1>
+                    </div>
+                </div>
+                <div class="flex justify-around items-center">
+                    <i class="fa-solid fa-gauge text-4xl"></i>
+                    <div class="text-left text-sm font-semibold text-gray-800 mx-1 ">
+                        <h1>Pressure</h1>
+                        <h1 id="weather-pressure"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
